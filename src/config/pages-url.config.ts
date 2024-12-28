@@ -1,7 +1,7 @@
 class DASHBOARD {
 	private root = 'i/';
 
-	HOOM = this.root;
+	HOME = this.root;
 	TASKS = `${this.root}/tasks`;
 	HABITS = `${this.root}/habits`;
 	TIMER = `${this.root}/timer`;
