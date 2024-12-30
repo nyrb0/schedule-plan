@@ -27,7 +27,6 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={`${zen.className} ${zen.className} antialiased`}>
 				<Providers>{children}</Providers>
-
 				<Toaster
 					theme='dark'
 					position='bottom-right'
