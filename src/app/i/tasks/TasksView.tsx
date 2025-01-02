@@ -1,6 +1,6 @@
 'use client';
 
-import ListView from './list-view/ListView';
+import { ListView } from './list-view/ListView';
 
 const TasksView = () => {
 	return <ListView />;

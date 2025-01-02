@@ -13,7 +13,7 @@ import {
 interface IDatePicker {
 	onChange: (value: string) => void;
 	value: string;
-	position: 'left' | 'right';
+	position?: 'left' | 'right';
 }
 
 dayjs.extend(LocalizedFormat);

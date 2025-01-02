@@ -1,5 +1,5 @@
-import Heading from '../components/ui/Heading';
 import TasksView from './TasksView';
+import Heading from '@/app/components/ui/Heading';
 import { SEO_OFF } from '@/constants/seo.constants';
 import { Metadata } from 'next';
 import React from 'react';
