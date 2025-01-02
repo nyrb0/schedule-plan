@@ -1,18 +1,19 @@
-import { taskService } from '@/services/task.service';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 
-export const useDeleteTask = () => {
-	const queryClient = useQueryClient();
+import { taskService } from '@/services/task.service'
+
+export function useDeleteTask() {
+	const queryClient = useQueryClient()
 
 	const { mutate: deleteTask, isPending: isDeletePending } = useMutation({
-		mutationKey: ['create task'],
-		mutationFn: (id: string) => taskService.deleteTaks(id),
+		mutationKey: ['delete task'],
+		mutationFn: (id: string) => taskService.deleteTask(id),
 		onSuccess() {
 			queryClient.invalidateQueries({
 				queryKey: ['tasks']
-			});
+			})
 		}
-	});
+	})
 
-	return { deleteTask, isDeletePending };
-};
+	return { deleteTask, isDeletePending }
+}

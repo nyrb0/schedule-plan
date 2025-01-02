@@ -18,7 +18,7 @@ interface IDatePicker {
 
 dayjs.extend(LocalizedFormat);
 
-const DatePicket: React.FC<IDatePicker> = ({ onChange, value, position }) => {
+const DatePicker: React.FC<IDatePicker> = ({ onChange, value, position }) => {
 	const [selected, setSelected] = useState<Date>();
 	const { isShow, setIsShow, ref } = useOutside(false);
 
@@ -73,4 +73,4 @@ const DatePicket: React.FC<IDatePicker> = ({ onChange, value, position }) => {
 	);
 };
 
-export default DatePicket;
+export default DatePicker;

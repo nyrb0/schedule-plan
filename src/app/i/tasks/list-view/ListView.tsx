@@ -1,17 +1,17 @@
-'use client';
+'use client'
 
-import { COLUMNS } from '../columns.data';
-import { useTaskDnd } from '../hooks/useTaskDnd';
-import { useTasks } from '../hooks/useTasks';
-import styles from './ListRow.module.scss';
-import { ListRowParent } from './ListRowParent';
-import { DragDropContext } from '@hello-pangea/dnd';
+import { DragDropContext } from '@hello-pangea/dnd'
 
-/* eslint-disable */
+import { COLUMNS } from '../columns.data'
+import { useTaskDnd } from '../hooks/useTaskDnd'
+import { useTasks } from '../hooks/useTasks'
+
+import { ListRowParent } from './ListRowParent'
+import styles from './ListView.module.scss'
 
 export function ListView() {
-	const { items, setItems } = useTasks();
-	const { onDragEnd } = useTaskDnd();
+	const { items, setItems } = useTasks()
+	const { onDragEnd } = useTaskDnd()
 
 	return (
 		<DragDropContext onDragEnd={onDragEnd}>
@@ -36,5 +36,5 @@ export function ListView() {
 				</div>
 			</div>
 		</DragDropContext>
-	);
+	)
 }
